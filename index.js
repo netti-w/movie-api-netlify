@@ -5,10 +5,16 @@ uuid = require('uuid');
 
 const app = express();
 
-app.use(morgan('common'));
+// app.use(morgan('common'));
 // app.use(express.static('public'));
 
 app.use(bodyParser.json());
+const mongoose = require('mongoose');
+const Models = require('.models.js');
+
+// call movie and user modals from modals.js
+const Movies = Models.Movie;
+const Users = Models.User;
 
 let users = [
   {
