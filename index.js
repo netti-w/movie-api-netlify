@@ -9,12 +9,17 @@ const app = express();
 // app.use(express.static('public'));
 
 app.use(bodyParser.json());
+// app.use.apply(bodyParser.urlencoded({ extended: true }));
+
 const mongoose = require('mongoose');
-const Models = require('.models.js');
+// const Models = require('.models.js');
 
 // call movie and user modals from modals.js
-const Movies = Models.Movie;
-const Users = Models.User;
+// const Movies = Models.Movie;
+// const Users = Models.User;
+
+// Connecting LOCAL myFlixDB via Mongoose to perform CRUD operations
+// mongoose.connect('mongodb://localhost:27017/myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
 let users = [
   {
